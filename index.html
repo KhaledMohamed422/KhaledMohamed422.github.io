@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الموقع تحت الصيانة</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(270deg, #001840, #0040b0, #001840);
+      background-size: 600% 600%;
+      animation: gradientBG 12s ease infinite;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      max-width: 520px;
+      animation: fadeInUp 1.5s ease forwards;
+    }
+
+    .logo img {
+      max-width: 220px;
+      margin-bottom: 25px;
+      animation: zoomBounce 2s ease;
+      filter: drop-shadow(0px 3px 8px rgba(0,0,0,0.5));
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+      animation: fadeSlideDown 1.5s ease forwards;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      opacity: 0;
+      animation: fadeSlideUp 2s ease forwards;
+      animation-delay: 1s;
+    }
+
+    .supervision {
+      margin-top: 30px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      font-weight: 600;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 2s;
+    }
+
+    /* Animations */
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    @keyframes zoomBounce {
+      0% {transform: scale(0.5); opacity: 0;}
+      60% {transform: scale(1.2); opacity: 1;}
+      100% {transform: scale(1);}
+    }
+
+    @keyframes fadeSlideDown {
+      0% {opacity: 0; transform: translateY(-30px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeSlideUp {
+      0% {opacity: 0; transform: translateY(30px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      0% {opacity: 0; transform: translateY(40px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="card">
+    <div class="logo">
+      <img src="logo.png" alt="AL OMDA Logo">
+    </div>
+    <h2>🚧 الموقع تحت الصيانة 🚧</h2>
+    <p>جارٍ تجهيز الموقع لإطلاقه قريباً بشكل أفضل!</p>
+    <div class="supervision">
+      <p>تحت إشراف:</p>
+      <p>م/ حسين رجب</p>
+      <p>ا/ أحمد علي</p>
+    </div>
+  </div>
+</body>
+</html>
